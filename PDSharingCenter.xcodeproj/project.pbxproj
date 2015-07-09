@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4AB25981B4E81B2005D29FD /* PDSharingCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A4AB25971B4E81B2005D29FD /* PDSharingCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4AB259E1B4E81B2005D29FD /* PDSharingCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AB25921B4E81B2005D29FD /* PDSharingCenter.framework */; };
 		A4AB25A51B4E81B2005D29FD /* PDSharingCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AB25A41B4E81B2005D29FD /* PDSharingCenterTests.m */; };
+		A4AB25B01B4E81C1005D29FD /* PDSharingCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A4AB25AE1B4E81C1005D29FD /* PDSharingCenter.h */; };
+		A4AB25B11B4E81C1005D29FD /* PDSharingCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AB25AF1B4E81C1005D29FD /* PDSharingCenter.m */; };
+		A4AB25B31B4E81D9005D29FD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AB25B21B4E81D9005D29FD /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,10 +27,12 @@
 /* Begin PBXFileReference section */
 		A4AB25921B4E81B2005D29FD /* PDSharingCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PDSharingCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AB25961B4E81B2005D29FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4AB25971B4E81B2005D29FD /* PDSharingCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDSharingCenter.h; sourceTree = "<group>"; };
 		A4AB259D1B4E81B2005D29FD /* PDSharingCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDSharingCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AB25A31B4E81B2005D29FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4AB25A41B4E81B2005D29FD /* PDSharingCenterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDSharingCenterTests.m; sourceTree = "<group>"; };
+		A4AB25AE1B4E81C1005D29FD /* PDSharingCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSharingCenter.h; sourceTree = "<group>"; };
+		A4AB25AF1B4E81C1005D29FD /* PDSharingCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSharingCenter.m; sourceTree = "<group>"; };
+		A4AB25B21B4E81D9005D29FD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AB25B31B4E81D9005D29FD /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,7 @@
 				A4AB25941B4E81B2005D29FD /* PDSharingCenter */,
 				A4AB25A11B4E81B2005D29FD /* PDSharingCenterTests */,
 				A4AB25931B4E81B2005D29FD /* Products */,
+				A4AB25B41B4E81E0005D29FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +77,8 @@
 		A4AB25941B4E81B2005D29FD /* PDSharingCenter */ = {
 			isa = PBXGroup;
 			children = (
-				A4AB25971B4E81B2005D29FD /* PDSharingCenter.h */,
+				A4AB25AE1B4E81C1005D29FD /* PDSharingCenter.h */,
+				A4AB25AF1B4E81C1005D29FD /* PDSharingCenter.m */,
 				A4AB25951B4E81B2005D29FD /* Supporting Files */,
 			);
 			path = PDSharingCenter;
@@ -102,6 +109,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A4AB25B41B4E81E0005D29FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4AB25B21B4E81D9005D29FD /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -109,7 +124,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AB25981B4E81B2005D29FD /* PDSharingCenter.h in Headers */,
+				A4AB25B01B4E81C1005D29FD /* PDSharingCenter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AB25B11B4E81C1005D29FD /* PDSharingCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
