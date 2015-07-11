@@ -35,38 +35,38 @@ typedef void (^PDSharingCenterRequestCompletion)(BOOL commited);
     UIPopoverController *_popoverController;
 }
 
-+ (instancetype)shareCenter;
++ (nonnull instancetype)defaultCenter;
 
-@property (nonatomic, retain) UIBarButtonItem *targetBarButtonItem;
-@property (nonatomic, retain) UIView *targetView;
-@property (nonatomic, retain) UIViewController *targetViewController;
+@property (nonatomic, retain, nullable) UIBarButtonItem *targetBarButtonItem;
+@property (nonatomic, retain, nullable) UIView *targetView;
+@property (nonatomic, retain, nullable) UIViewController *targetViewController;
 
-- (void)shareItems:(NSArray *)objects completion:(void (^)(BOOL commited))completion;
+- (void)shareItems:(nonnull NSArray *)objects completion:(nullable void (^)(BOOL commited))completion;
 
-@property (nonatomic, copy) NSString *companyName;
-@property (nonatomic, copy) NSString *appName;
-@property (nonatomic, copy) NSString *appTwitterTag;
-@property (nonatomic, copy) NSString *supportEmail;
-@property (nonatomic, copy) NSString *appStoreID;
+@property (nonatomic, copy, nullable) NSString *companyName;
+@property (nonatomic, copy, nullable) NSString *appName;
+@property (nonatomic, copy, nullable) NSString *appTwitterTag;
+@property (nonatomic, copy, nullable) NSString *supportEmail;
+@property (nonatomic, copy, nullable) NSString *appStoreID;
 /** If none is set, it is automatically created if either the appStoreID property is set or the companyName and appName properties are set. */
-@property (nonatomic, retain) NSURL *appStoreURL;
+@property (nonatomic, copy, nullable) NSURL *appStoreURL;
 /** If none is set, it is automatically created by removing the URL schema from appStoreURL. */
-@property (nonatomic, retain) NSString *appStoreURLShortString;
+@property (nonatomic, copy, nullable) NSString *appStoreURLShortString;
 /** If none is set, it is automatically created if the appStoreID property is set. */
-@property (nonatomic, retain) NSURL *appStoreUserReviewsURL;
+@property (nonatomic, copy, nullable) NSURL *appStoreUserReviewsURL;
 
-- (NSString *)appVersion;
-- (NSString *)appVersionShort;
+- (nullable NSString *)appVersion;
+- (nullable NSString *)appVersionShort;
 
-- (void)shareAppWithCompletion:(PDSharingCenterRequestCompletion)completion;
+- (void)shareAppWithCompletion:(nullable PDSharingCenterRequestCompletion)completion;
 - (void)showAppStoreUserReviews;
-- (void)showFeedbackFormWithCompletion:(PDSharingCenterRequestCompletion)completion;
-- (void)showFeedbackFormInViewController:(UIViewController *)viewController withCompletion:(PDSharingCenterRequestCompletion)completion;
+- (void)showFeedbackFormWithCompletion:(nullable PDSharingCenterRequestCompletion)completion;
+- (void)showFeedbackFormInViewController:(nonnull UIViewController *)viewController withCompletion:(nullable PDSharingCenterRequestCompletion)completion;
 
-+ (NSURL *)appStoreURLWithIdentifier:(NSString *)identifier;
-+ (NSURL *)appStoreRateURLWithIdentifier:(NSString *)identifier;
-+ (NSURL *)appStoreURLWithCompanyName:(NSString *)companyName appName:(NSString *)appName;
++ (nonnull NSURL *)appStoreURLWithIdentifier:(nonnull NSString *)identifier;
++ (nonnull NSURL *)appStoreRateURLWithIdentifier:(nonnull NSString *)identifier;
++ (nonnull NSURL *)appStoreURLWithCompanyName:(nonnull NSString *)companyName appName:(nonnull NSString *)appName;
 
-- (NSString *)defaultLocalizedShareString;
+- (nonnull NSString *)defaultLocalizedShareString;
 
 @end

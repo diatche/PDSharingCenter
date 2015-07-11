@@ -21,11 +21,11 @@
 
 @implementation PDSharingCenter
 
-PDSharingCenter *_shareCenter;
-+ (instancetype)shareCenter {
-    if (!_shareCenter)
-        _shareCenter = [[PDSharingCenter alloc] init];
-    return _shareCenter;
+PDSharingCenter *_defaultCenter;
++ (instancetype)defaultCenter {
+    if (!_defaultCenter)
+        _defaultCenter = [[PDSharingCenter alloc] init];
+    return _defaultCenter;
 }
 
 @synthesize targetBarButtonItem = _targetBarButtonItem;
