@@ -3,7 +3,7 @@ Easily implement native sharing for social networks, email and SMS.
 
 ## Setup
 ```objc
-PDSharingCenter *center = [PDSharingCenter new];
+PDSharingCenter *center = [PDSharingCenter defaultCenter];
 
 // Set at least the app name and company name
 center.companyName = @"companyName";
